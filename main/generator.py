@@ -86,6 +86,3 @@ def generate() :
 
 def input_android_project():
     return input("Where is your Android project path?\n")
-
-
-generate()
