@@ -4,8 +4,8 @@ from kredivo_config import Config
 class AndroidProject:
     androidPackageName = "com.kredivocorp.android"
 
-    def __init__(self, configPath):
-        self.config = Config(configPath)
+    def __init__(self):
+        self.config = Config()
 
     def validate(self, projectPath):
         try:

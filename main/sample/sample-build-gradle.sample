@@ -1,0 +1,13 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin)
+    alias(libs.plugins.jetbrains.kotlinx.kover)
+}
+
+android {
+    namespace = [[PACKAGE_NAME]]
+}
+
+dependencies {
+    [[DEPEDENCIY_LIST]]
+}
