@@ -21,7 +21,8 @@ class BaseAction:
             for string in splitString:
                 realFolder += string + '/'
 
-        path = self.config.get_value(self.config.androidProjectConfig) + '/' + self.rootFolder + '/' + realFolder + '/src'
+        basePath = self.config.get_value(self.config.androidProjectConfig) + '/' + self.rootFolder + '/' + realFolder
+        path = basePath + '/src'
 
         javaPath = path + '/main/java'
 
@@ -30,7 +31,7 @@ class BaseAction:
         os.makedirs(path)
         os.makedirs(javaPath)
         
-        self.create_build_gradle(path, packageName)
+        self.create_build_gradle(basePath, packageName)
         self.make_sub_child(javaPath, packageName)
         self.replace_settings_gradle()
 
@@ -52,7 +53,7 @@ class BaseAction:
         sampleGradle = open(os.getcwd() + '/kredivo_generator/sample/sample-build-gradle.sample', 'r').read()
 
         result = sampleGradle.replace('[[DEPEDENCIY_LIST]]', self.dependencyList)
-        result = result.replace('[[PACKAGE_NAME]]', packageName)
+        result = result.replace('[[PACKAGE_NAME]]', '\"' + packageName + '\"')
 
         with open(gradlePath, 'w') as file:
             file.write(result)

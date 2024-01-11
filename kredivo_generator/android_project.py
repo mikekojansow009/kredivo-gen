@@ -2,7 +2,7 @@ import os
 from kredivo_generator.kredivo_config import Config
 
 class AndroidProject:
-    androidPackageName = "com.kredivocorp.android"
+    androidPackageName = "com.kredivocorp.kredivo"
 
     def __init__(self):
         self.config = Config()
