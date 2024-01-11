@@ -1,4 +1,4 @@
-from actions.base_action import BaseAction
+from kredivo_generator.actions.base_action import BaseAction
 
 class ThirdParty(BaseAction):
     def __init__(self, folder):

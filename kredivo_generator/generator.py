@@ -1,13 +1,13 @@
 import os
 import argparse
-from android_project import AndroidProject
+from kredivo_generator.android_project import AndroidProject
 from pathlib import Path
-from kredivo_config import Config
-from actions.base_action import BaseAction
-from actions.core import Core
-from actions.feature import Feature
-from actions.subsystem import Subsystem
-from actions.thirdparty import ThirdParty
+from kredivo_generator.kredivo_config import Config
+from kredivo_generator.actions.base_action import BaseAction
+from kredivo_generator.actions.core import Core
+from kredivo_generator.actions.feature import Feature
+from kredivo_generator.actions.subsystem import Subsystem
+from kredivo_generator.actions.thirdparty import ThirdParty
 
 def generate() :
     argument = argparse.ArgumentParser()
@@ -86,3 +86,6 @@ def generate() :
 
 def input_android_project():
     return input("Where is your Android project path?\n")
+
+
+# generate()

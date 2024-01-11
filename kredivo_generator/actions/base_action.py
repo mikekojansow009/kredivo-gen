@@ -1,6 +1,6 @@
 import os
 
-from kredivo_config import Config
+from kredivo_generator.kredivo_config import Config
 from pathlib import Path
 
 class BaseAction:
@@ -49,7 +49,7 @@ class BaseAction:
 
         Path(gradlePath).touch()
 
-        sampleGradle = open(os.getcwd() + '/main/sample/sample-build-gradle.sample', 'r').read()
+        sampleGradle = open(os.getcwd() + '/kredivo_generator/sample/sample-build-gradle.sample', 'r').read()
 
         result = sampleGradle.replace('[[DEPEDENCIY_LIST]]', self.dependencyList)
         result = result.replace('[[PACKAGE_NAME]]', packageName)

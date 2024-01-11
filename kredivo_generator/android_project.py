@@ -1,5 +1,5 @@
 import os
-from kredivo_config import Config
+from kredivo_generator.kredivo_config import Config
 
 class AndroidProject:
     androidPackageName = "com.kredivocorp.android"

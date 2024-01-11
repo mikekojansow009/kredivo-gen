@@ -5,10 +5,10 @@ setup(
     version = "1.0.0",
     author = "Michael Kojansow",
     author_email = "michael.kojansow@finaccel.co",
-    packages = find_packages(include = ['main', 'main.*']),
+    packages = find_packages(include = ['kredivo_generator', 'kredivo_generator.*']),
     entry_points = {
         'console_scripts': [
-            'kredigen=main.generator:generate'
+            'kredigen=kredivo_generator.generator:generate'
         ]
     }
 )

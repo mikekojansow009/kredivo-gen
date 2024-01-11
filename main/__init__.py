@@ -1,1 +1,0 @@
-from main.generator import generate
