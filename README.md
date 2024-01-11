@@ -1,7 +1,7 @@
 ## How To Install
 
 This repository is using by python code.
-You can install with this command : `pip3 install https://github.com/mikekojansow009/kredivo-gen`
+You can install with this command : `pip3 install git+http://github.com/mikekojansow009/kredivo-gen`
 
 
 ## How To Use
