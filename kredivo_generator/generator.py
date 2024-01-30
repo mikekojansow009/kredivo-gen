@@ -64,8 +64,16 @@ def generate() :
             return
 
 
-        featureAction = Feature(args.feature + '.' + options[answer - 1])
-        featureAction.make()
+        if answer == len(options) :
+            for index, item in enumerate(options):
+                if index == len(options) - 1:
+                    break
+
+                featureAction = Feature(args.feature + '.' + item)
+                featureAction.make()
+        else :
+            featureAction = Feature(args.feature + '.' + options[answer - 1])
+            featureAction.make()
 
         action = True
     
