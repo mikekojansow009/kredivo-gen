@@ -48,7 +48,7 @@ def generate() :
         action = True
     
     if args.feature:
-        options = ['domain', 'presentation', 'data', 'shared', 'all']
+        options = ['domain', 'presentation', 'data', 'repository', 'shared', 'all']
         
         inputMessage = 'Which module do you need to create?\n'
 
@@ -88,6 +88,7 @@ def generate() :
         thirdpartyAction.make()
 
         action = True
+
     
     if action == False:
         argument.print_help()
